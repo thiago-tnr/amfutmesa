@@ -1,0 +1,745 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+.footer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+.footer-all{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    transition: all ease 0.8s;
+    z-index: 99;
+}
+.logo img{
+    width: 150px;
+    margin-left: 40px;
+}
+.list ul{
+    margin-right: 40px;
+}
+.list ul, .list li {
+    display: flex;
+    list-style: none;
+}
+.list a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.521);
+}
+.image-bg{
+    flex: 1;
+    background-image: url("./images/IMG_9607-2\(2\).jpeg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+    overflow: hidden;
+   animation: animate ease-in-out 10s infinite;
+    animation-direction: alternate;
+}
+@keyframes animate{
+    from { background-size: cover; animation: ease-in-out;}
+    to{transform: scalex(1.2);}
+}
+.about{
+    width: 100vw;
+    height: 700px;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+}
+.about h1 {
+    margin: 0;
+    color: #f5f5f5;
+    padding: 50px;
+}
+.about-our{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: seashell;
+    background-color: #000;
+}
+.about-info{
+    width: 490px;
+    margin-right: 10px;
+}
+.about-info p {
+    font-family: 'Truculenta', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    width: 480px;
+    text-align: justify;
+    margin: auto;
+}
+#park{
+    text-decoration: none;
+    font-style: italic;
+    color: orange;
+
+}
+.about-us--img{
+    width: 450px;
+    margin: 10px;
+}
+.about-us--img img{
+    width: 500px;
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.418);
+}
+aside{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+.menu.open {
+    margin-top: 10px;
+}
+.menu-open img {
+    width: 35px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+.menu-area{
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all ease 0.8s;
+}
+.menu-area ul{
+    margin-left: -30px;
+}
+.menu-area ul, .menu-area li{
+    list-style: none;
+    
+}
+.menu-area a {
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    color: seashell;
+    border-bottom: 1px solid #f5f5f5;
+
+}
+
+.container{
+    width: 100vw;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.mesas{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    margin: auto;
+}
+.mesas h1{
+    margin: 0;
+    padding: 50px;
+}
+.mesas p{
+    font-family: 'Truculenta', sans-serif;
+    font-weight: 400;
+    font-size: 18pt;
+}
+.img-mesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-mesa img{
+    width: 600px;
+}
+.img-mesa h3 {
+    font-weight: lighter;
+    font-size:15pt;
+    margin: 0;
+}
+.dimen{
+    width: 310px;
+    background-color:#eee;
+    font-size: 10pt;
+    text-align: center;
+    border-radius: 10px;
+}
+.img-mesa a {
+    text-decoration: none;
+    background-color: rgba(46, 139, 86, 0.562);
+    color: #000;
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.galeria{
+    height: auto;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.galeria h1{
+    padding: 50px;
+}
+
+.galeria-fots{
+    width: 100%;
+    height: auto;
+    border-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    flex-wrap: wrap;
+}
+.imagem{
+    width: 320px;
+    height: 220px;
+}
+.imagem img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+.moddal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.6);
+    animation: fadeIn;
+    animation-duration: 0.5s;
+    transition: all ease 0.2s;
+    z-index: 99;
+}
+#bt-close{
+    color: #fff;
+    background-color:rgba(204, 204, 204, 0.397);
+    position: absolute;
+    top:180px;
+    right: 100px;
+    padding: 10px;
+    font-size: 20px;
+}
+.modal-reg{
+    width: 100vw;
+    height: 100vh;
+
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+
+}
+.modal-content img{
+    margin: auto;
+    width: 55vw;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all ease 0.8s;
+}
+.area--mapa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.mapa-img {
+    width: 100%;
+    height: 500px;
+    background-image: url("./local.png");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.4);
+}
+.area--info{
+    width: 435px;
+    height: 300px;
+    background-color:rgba(245, 245, 245, 0.9);
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #777;
+}
+
+.mapa-info-icon{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    align-items: center;
+    margin-top: 10px;
+    color: #000;
+    font-size: 12pt;
+    margin: 10px 20px;
+}
+.mapa-info-icon:first-child{
+    margin-top: 30px;
+}
+.mapa-info-img img {
+    width: 20px;
+    margin: 10px;
+}
+.parceiros{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+.cliente{
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logo-clientes{
+    width: 330px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.logo-clientes img {
+    width: 180px;
+}
+.orcamento{
+    color: #000;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+}
+.orcamento h1{
+    color: #fff;
+}
+.orc-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+.orc-area textarea{
+    display: block;
+    resize: none;
+    outline: none;
+    width: 90%;
+    height: 200px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;    
+}
+#btn{
+    background-color: rgba(46, 139, 86, 0.562);
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    font-family: 'Truculenta', sans-serif;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #aaa;
+    cursor: pointer;
+}
+.fim-pg{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.fim-pg h1 {
+    margin: 0;
+    padding: 50px;
+    color: #000;
+    font-size: 16pt;
+}
+.fim-cart{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.cartoes ul, .cartoes li{
+    list-style: none;
+    display: flex;
+    padding: 0;
+
+}
+.card-pg{
+    width: 90px;
+    height: 50px;
+    margin: 10px;
+    filter: grayscale(0.4);
+}
+.fim-pg2{
+    text-align: center;
+    color: rgb(90, 90, 90);
+    background-color: #fff;
+}
+.copy p{
+    margin: 0;
+    padding: 20px;
+    border-top:1px solid rgba(119, 119, 119, 0.377);
+}
+.ajuda, .ajuda2{
+    display: none;
+    position: fixed;
+    width:320px;
+    height: 350px;
+    bottom: 100px;
+    right: 50px;
+    border-radius: 10px;
+    background-color: #ddd;
+    text-align: justify;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+    transition: all ease 0.2s;
+    z-index: 99;
+}
+.ajuda2{
+    display: flex;
+}
+#area-ajuda{
+    width: 90%;
+    height: 90%;
+}
+.ajudar p{
+    font-size: 1.1rem;
+    font-family: 'Truculenta', sans-serif;
+}
+.ajudar h1{
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+#ajuda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+#msg2{
+    resize: none;
+    outline: none;
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    background-color: #dddddd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 3px;   
+}
+.toogle{
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    bottom: 20px;
+    right: 20px;
+    width: 210px;
+    height: 30px;
+    background-color: rgba(46, 139, 86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12pt;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+}
+.toogle p{
+    margin: 0;
+}
+.toogle img {
+    width: 20px;
+    margin: 5px;
+}
+[data-animate]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-animate="left"]{
+    transform: translate3d(-50px, 0,0);
+}
+[data-animate="rigth"]{
+    transform: translate3d(50px, 0,0);
+}
+[data-animate].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px,0px);
+}
+
+@media only screen and (min-width:320px) and (max-width:750px){
+    .footer{
+        top: 0;
+        width: 100%;
+        height: 275px;
+    }
+    .footer-all{
+        width: 100%;
+        height: 80px;
+    }
+    .list{
+        display: none;
+    }
+    aside{
+        display: flex;
+    }
+    .logo img{
+        width: 70px;
+        margin-left: 10px;
+    }
+    .about-our{
+        flex-direction: column;
+    }
+    .about-info{
+        width: 100%;
+    }
+    .about-info p {
+        font-size: 11pt;
+        width: 350px;
+        margin: auto;
+        margin-right: 5px;
+    }
+    .about-us--img{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .about-us--img img {
+        width: 300px;
+        margin: auto;
+    }
+
+    .image-bg{
+        background-size:110%;
+        background-repeat: no-repeat;
+        transition: all 0.5s;
+        overflow: hidden;
+        animation: animate ease-in-out 10s infinite;
+        animation-direction: alternate;
+    }
+    @keyframes animate{
+        from { background-size: 110%; animation: ease-in-out;}
+        to{transform: scalex(1.2);overflow-x: hidden;}
+    }
+    .mesas{
+        margin-top: 50px;
+    }
+    .mesas p {
+        font-size: 16pt;
+    }
+    .img-mesa img{
+        width: 100%;
+    }
+    .galeria{
+        height: auto;
+    }
+    .modal-content {
+        width: 87vw;
+        height: 87vh;
+    }
+    .modal-content img{
+        width: 350px;
+        height: auto;
+    }
+    #bt-close{
+        top: 500px;
+        margin-right: 75px;
+        padding: 5px 10px;
+    }
+    .area--info{
+        margin-left: 10px;
+        padding: 15px;
+        width: auto;
+        font-size: 12px;
+        margin: 0;
+        box-shadow: none;
+        border-radius: none;
+        background-color:rgba(245, 245, 245, 0.9);
+        height: 220px;
+    }
+    .orc-area{
+        width: 90%;
+    }
+    .orc-area textarea{
+        width: 90%;
+    }
+    .mapa-info-icon:first-child{
+        margin-top: 20px;
+    }
+    .mapa-info-icon{
+        width: auto;
+        height: 25px;
+        margin: 10px 5px;
+        margin-right: 0;
+    }
+    .area--info p{
+        font-size: 10pt;
+    }
+    .mapa-img{
+        background-image: url("./local2.png");
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    .logo-clientes {
+        width: 200px;
+        height: 110px;
+    }
+    .logo-clientes img {
+        width: 120px;
+    }
+    .card-pg{
+        width: 60px;
+        height: 32px;
+        margin: 10px;
+        filter: grayscale(0.4);
+    }
+    .copy p{
+        margin: 0;
+        padding: 20px;
+        font-size: 10pt;
+        border-top:1px solid rgba(119, 119, 119, 0.377);
+    }
+    .fim-pg{
+    height: 180px;
+    }
+    .fim-pg h1 {
+     padding: 20px;
+    }
+}
+.menu-open img {
+    margin-right: 40px ;
+}
+#ajudar{
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 40%;
+    bottom: 100px;
+    right: 50px;
+    border-radius: 10px;
+    background-color: #ddd;
+    text-align: justify;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+    transition: all ease 0.2s;
+    z-index: 99;
+}
+[data-animate]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-animate="left"]{
+    transform: translate3d(-40px, 0,0);
+}
+[data-animate="rigth"]{
+    transform: translate3d(40px, 0,0);
+}
+[data-animate].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px,0px);
+}
+@media only screen and (min-width:750px) and (max-width:800px){
+    .about{
+        height: 900px;
+    }
+    .about-our{
+        flex-direction: column;
+    }
+    .about-us--img img {
+        margin-top: 50px;
+        width: 450px;
+    }
+    .galeria{
+        height: auto;
+    }
+    .modal-content img{
+        width: 550px;
+        height: auto;
+    }
+    #bt-close{
+        top: 150px;
+        padding: 5px 10px;
+    }
+    .area--info{
+        margin-left: 10px;
+        padding: 15px;
+        width: auto;
+        font-size: 12px;
+        margin: 0;
+        box-shadow: none;
+        border-radius: none;
+        background-color:rgba(245, 245, 245, 0.9);
+        height: 220px;
+    }
+    .mapa-info-icon:first-child{
+        margin-top: 20px;
+    }
+    .mapa-info-icon{
+        width: auto;
+        height: 20px;
+        margin: 10px 5px;
+        margin-right: 0;
+    }
+    [data-animate]{
+        opacity: 0;
+        transition: .3s;
+    }
+    [data-animate="left"]{
+        transform: translate3d(-50px, 0,0);
+    }
+    [data-animate="rigth"]{
+        transform: translate3d(50px, 0,0);
+    }
+    [data-animate].animate{
+        opacity: 1;
+        transform: translate3d(0px, 0px,0px);
+    }
+}
